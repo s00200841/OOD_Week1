@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Week1
 {
-    public class Band : IComparable
+    public  class Band : IComparable
     {
         // Propetries
         public string BandName { get; set; }

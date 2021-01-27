@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OOD_Week1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <Label Content="Bands" HorizontalAlignment="Left" Margin="66,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Label Content="Band Information" HorizontalAlignment="Left" Margin="470,10,0,0" VerticalAlignment="Top" FontSize="24"/>
@@ -15,7 +15,7 @@
         <TextBlock x:Name="tblkBandInfo" HorizontalAlignment="Left" Margin="481,118,0,0" TextWrapping="Wrap" Text="Band Information" VerticalAlignment="Top" Height="102" Width="259"/>
         <Label Content="Albums" HorizontalAlignment="Left" Margin="481,225,0,0" VerticalAlignment="Top"/>
         <ListBox x:Name="lbxAlbums" HorizontalAlignment="Left" Height="102" Margin="481,256,0,0" VerticalAlignment="Top" Width="259"/>
-        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="620,374,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Margin="665,373,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

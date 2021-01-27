@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOD_Week1
 {
-    public  class Band : IComparable
+    public abstract class Band : IComparable
     {
         // Propetries
         public string BandName { get; set; }
@@ -36,6 +36,29 @@ namespace OOD_Week1
         {
             Band otherband = obj as Band;
             return this.BandName.CompareTo(otherband.BandName);
+        }
+    }
+
+    public class RockBand : Band
+    {
+        public override string ToString()
+        {
+            return base.ToString() + " - Rock Band";
+        }
+    }
+
+    public class GrungeBand : Band
+    {
+        public override string ToString()
+        {
+            return base.ToString() + " - Grunge Band";
+        }
+    }
+    public class MetalBand : Band
+    {
+        public override string ToString()
+        {
+            return base.ToString() + " - Metal Band";
         }
     }
 }

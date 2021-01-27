@@ -29,12 +29,14 @@ namespace OOD_Week1
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // Creation
-            Band b1 = new Band() { BandName = "Nirvana", YearFormed = 1987, Members = "Kurt Cobain, Krist Novoselic, Dave Grohl" };
-            Band b2 = new Band() { BandName = "The foo Fighters", YearFormed = 1994, Members = "Dave Grohl, Nate Mendel , Rami Jaffee" };
-            Band b3 = new Band() { BandName = "Metalica", YearFormed = 1981, Members = "James hetfield, Lars Ulrich, Kirk Hammett" };
-            Band b4 = new Band() { BandName = "Arctic Monkeys", YearFormed = 2002, Members = "Alex Turner, Matt Helders, Jamie Cook" };
-            Band b5 = new Band() { BandName = "The Strokes", YearFormed = 1998, Members = "Julian Casablancas, nick Valensi, Fabrizio Moretti, Albert Hammond Jr" };
-            Band b6 = new Band() { BandName = "ACDC", YearFormed = 1973, Members = "Angus Young, Malcolm Young, Bon Scott, Brian Johnson" };
+            GrungeBand b1 = new GrungeBand() { BandName = "Nirvana", YearFormed = 1987, Members = "Kurt Cobain, Krist Novoselic, Dave Grohl" };
+
+            RockBand b2 = new RockBand() { BandName = "The Foo Fighters", YearFormed = 1994, Members = "Dave Grohl, Nate Mendel , Rami Jaffee" };
+            RockBand b4 = new RockBand() { BandName = "Arctic Monkeys", YearFormed = 2002, Members = "Alex Turner, Matt Helders, Jamie Cook" };
+            RockBand b5 = new RockBand() { BandName = "The Strokes", YearFormed = 1998, Members = "Julian Casablancas, nick Valensi, Fabrizio Moretti, Albert Hammond Jr" };
+
+            MetalBand b6 = new MetalBand() { BandName = "ACDC", YearFormed = 1973, Members = "Angus Young, Malcolm Young, Bon Scott, Brian Johnson" };
+            MetalBand b3 = new MetalBand() { BandName = "Metalica", YearFormed = 1981, Members = "James hetfield, Lars Ulrich, Kirk Hammett" };
 
 
             // Addition

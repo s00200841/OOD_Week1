@@ -17,6 +17,9 @@ namespace OOD_Week1
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// Student ID : S00200841
+    /// Student Name : Andrew Casey
+    /// Note : as far as parts 12-13, exausted and need a break have the week to finish so will get back to try them 
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -28,6 +31,11 @@ namespace OOD_Week1
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            // Combobox setup
+            string[] genres = { "All", "Grunge", "Rock", "Metal" };
+            cbxGenre.ItemsSource = genres;
+
+
             // Creat Bands
             GrungeBand b1 = new GrungeBand() { BandName = "Nirvana", YearFormed = 1987, Members = "Kurt Cobain, Krist Novoselic, Dave Grohl" };
 
@@ -110,6 +118,52 @@ namespace OOD_Week1
                 tblkBandInfo.Text = string.Format($"{selectedBand.BandName} Formed in : {selectedBand.YearFormed}" +
                                                   $"\nMembers : {selectedBand.Members}");
             }
+        }
+
+        // Filters bands based on the ComboBox
+        private void cbxGenre_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // whats selected
+            string selectedGenre = cbxGenre.SelectedItem as string;
+
+            // filter list
+            List<Band> filteredList = new List<Band>();
+
+            switch (selectedGenre)
+            {
+                case "All":
+                    lbxBands.ItemsSource = allBands;
+                    break;
+
+                case "Grunge":
+                    foreach(Band band in allBands)
+                    {
+                        if (band is GrungeBand)
+                            filteredList.Add(band);
+                    }
+                    lbxBands.ItemsSource = filteredList;
+                    break;
+
+                case "Rock":
+                    foreach (Band band in allBands)
+                    {
+                        if (band is RockBand)
+                            filteredList.Add(band);
+                    }
+                    lbxBands.ItemsSource = filteredList;
+                    break;
+
+                case "Metal":
+                    foreach (Band band in allBands)
+                    {
+                        if (band is MetalBand)
+                            filteredList.Add(band);
+                    }
+                    lbxBands.ItemsSource = filteredList;
+                    break;
+
+            }
+
         }
     }
 }

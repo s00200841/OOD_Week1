@@ -31,7 +31,7 @@ namespace OOD_Week1
         // Methods
         public override string ToString()
         {
-            return string.Format($"{Name} - Released in : {YearOfRelease}. Sales of : {Sales}");
+            return string.Format($"{Name} - Released in : {YearOfRelease} - Sales of : {Sales}");
         }
 
     }

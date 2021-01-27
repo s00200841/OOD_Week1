@@ -12,6 +12,7 @@ namespace OOD_Week1
         public string BandName { get; set; }
         public int YearFormed { get; set; } // changing year from int to date time late i think : TODO change this 
         public string  Members { get; set; }
+        public List<Album> AlbumList { get; set; }
 
         // Constructors
         public Band(string bandName, int yearFormed, string members)
@@ -19,13 +20,12 @@ namespace OOD_Week1
             BandName = bandName;
             YearFormed = yearFormed;
             Members = members;
+
+            AlbumList = new List<Album>();
         }
 
         // Default Constructor
-        public Band()
-        {
-
-        }
+        public Band() : this("Unknown", 2000, "Unknown"){ }
 
         public override string ToString()
         {

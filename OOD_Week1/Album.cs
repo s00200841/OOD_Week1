@@ -8,14 +8,14 @@ namespace OOD_Week1
 {
     public class Album
     {
-
+        // Messing with int YearOfRelease to be DateTime
         // Properties
         public string Name { get; set; }
-        public int YearOfRelease { get; set; }
+        public DateTime YearOfRelease { get; set; }
         public int Sales { get; set; }
 
         // Constructors
-        public Album(string name, int yearOfRelease, int sales)
+        public Album(string name, DateTime yearOfRelease, int sales)
         {
             Name = name;
             YearOfRelease = yearOfRelease;
@@ -31,7 +31,13 @@ namespace OOD_Week1
         // Methods
         public override string ToString()
         {
-            return string.Format($"{Name} - Released in : {YearOfRelease} - Sales of : {Sales}");
+            return string.Format($"{Name} - Released in : {YearOfRelease.Day} : {YearOfRelease.Month} : {YearOfRelease.Year} - Sales of : {Sales} " +
+                $"              \nThis Album was released {CalculateYearsSinceRelease()} Year(s) ago.");
+        }
+
+        public int CalculateYearsSinceRelease()
+        {
+            return DateTime.Now.Year - YearOfRelease.Year;
         }
 
     }

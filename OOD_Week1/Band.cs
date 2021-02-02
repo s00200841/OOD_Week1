@@ -10,7 +10,7 @@ namespace OOD_Week1
     {
         // Propetries
         public string BandName { get; set; }
-        public int YearFormed { get; set; } // changing year from int to date time late i think : TODO change this 
+        public int YearFormed { get; set; } 
         public string  Members { get; set; }
         public List<Album> AlbumList { get; set; }
 
